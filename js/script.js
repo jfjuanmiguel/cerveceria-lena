@@ -62,13 +62,19 @@ var switchMenuToActive = function () {
 
   // Add 'active' to menu button if not already there
   menu_classes = document.querySelector("#navMenuButton").className;  
-  if (menu_classes.indexOf("active") == -1) {    
+  category_classes = document.querySelector("#navCategoryButton").className;  
+
+  if (menu_classes.indexOf("active") == -1 && category_classes.indexOf("active") != -1) {    
+    category_classes = category_classes.replace(new RegExp("active", "g"), "");
+    document.querySelector("#navCategoryButton").className = category_classes;  
     menu_classes += " active";
     document.querySelector("#navMenuButton").className = menu_classes;
   } 
 
-  category_classes = document.querySelector("#navCategoryButton").className;  
+  
   if (category_classes.indexOf("active") == -1) {
+    menu_classes = menu_classes.replace(new RegExp("active", "g"), "");
+    document.querySelector("#navMenuButton").className = menu_classes;  
     category_classes += " active";
     document.querySelector("#navCategoryButton").className = category_classes;
   }
