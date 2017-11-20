@@ -64,7 +64,7 @@ var switchMenuToActive = function () {
   menu_classes = document.querySelector("#navMenuButton").className;  
   category_classes = document.querySelector("#navCategoryButton").className;  
 
-  if (menu_classes.indexOf("active") == -1 && category_classes.indexOf("active") != -1) {    
+  if (menu_classes.indexOf("active") == -1) {    
     category_classes = category_classes.replace(new RegExp("active", "g"), "");
     document.querySelector("#navCategoryButton").className = category_classes;  
     menu_classes += " active";
