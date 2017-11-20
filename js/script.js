@@ -61,16 +61,16 @@ var switchMenuToActive = function () {
   document.querySelector("#navHomeButton").className = classes;  
 
   // Add 'active' to menu button if not already there
-  classes = document.querySelector("#navMenuButton").className;  
-  if (classes.indexOf("active") == -1) {    
-    classes += " active";
-    document.querySelector("#navMenuButton").className = classes;
+  menu_classes = document.querySelector("#navMenuButton").className;  
+  if (menu_classes.indexOf("active") == -1) {    
+    menu_classes += " active";
+    document.querySelector("#navMenuButton").className = menu_classes;
   } 
 
-  classes = document.querySelector("#navCategoryButton").className;  
-  if (classes.indexOf("active") == -1) {
-    classes += " active";
-    document.querySelector("#navCategoryButton").className = classes;
+  category_classes = document.querySelector("#navCategoryButton").className;  
+  if (category_classes.indexOf("active") == -1) {
+    category_classes += " active";
+    document.querySelector("#navCategoryButton").className = category_classes;
   }
 };
 
