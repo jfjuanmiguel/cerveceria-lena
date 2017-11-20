@@ -59,6 +59,8 @@ var switchMenuToActive = function () {
   var classes = document.querySelector("#navHomeButton").className;
   classes = classes.replace(new RegExp("active", "g"), "");
   document.querySelector("#navHomeButton").className = classes;
+  document.querySelector("#navMenuButton").className = classes;
+  document.querySelector("#navCategoryButton").className = classes;
 
   // Add 'active' to menu button if not already there
   classes = document.querySelector("#navMenuButton").className;  
