@@ -62,9 +62,11 @@ var switchMenuToActive = function () {
 
   // Add 'active' to menu button if not already there
   classes = document.querySelector("#navMenuButton").className;
-  if (classes.indexOf("active") == -1) {
-    classes += " active";
+  classes += " active";
+  if (classes.indexOf("active") == -1) {    
     document.querySelector("#navMenuButton").className = classes;
+  } else {
+    document.querySelector("#navCategoryButton").className = classes;
   }
 };
 
