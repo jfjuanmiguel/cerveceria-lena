@@ -61,11 +61,12 @@ var switchMenuToActive = function () {
   document.querySelector("#navHomeButton").className = classes;
 
   // Add 'active' to menu button if not already there
-  classes = document.querySelector("#navMenuButton").className;
-  classes += " active";
+  classes = document.querySelector("#navMenuButton").className;  
   if (classes.indexOf("active") == -1) {    
+    classes += " active";
     document.querySelector("#navMenuButton").className = classes;
   } else {
+    classes += " active";
     document.querySelector("#navCategoryButton").className = classes;
   }
 };
